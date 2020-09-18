@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Button extends React.Component {
+class Button extends Component {
   state = {
     butttonText: this.props.buttonText
   };
@@ -14,9 +14,7 @@ class Button extends React.Component {
 
   render() {
     return (
-      <button className="row btn btn-dark m-2 key">
-        {this.state.butttonText}
-      </button>
+      <button className="row btn m-2 key">{this.state.butttonText}</button>
     );
   }
 }

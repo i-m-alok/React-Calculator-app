@@ -7,7 +7,8 @@ class Keypad extends Component {
       [1, 2, 3],
       [4, 5, 6],
       [7, 8, 9],
-      [0, "+", "x"]
+      [0, "+", "x"],
+      ["=", "/"]
     ],
     currentValue: 0
   };
@@ -15,14 +16,14 @@ class Keypad extends Component {
     return (
       <div className="btn-group">
         {numberSet.map((number) => (
-          <Button key={number.toString()} buttonText={number} />
+          <Button key={"key" + number.toString()} buttonText={number} />
         ))}
       </div>
     );
   };
   render() {
     return (
-      <div className="btn-group-vertical mx-auto">
+      <div className="btn-group-vertical col" id="keypad">
         {this.state.numbers.map((numberSet) => this.addButtons(numberSet))}
       </div>
     );

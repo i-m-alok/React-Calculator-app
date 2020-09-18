@@ -1,4 +1,40 @@
-.App {
+/* * {
+  border: 1px blue solid;
+} */
+
+* {
   font-family: sans-serif;
   text-align: center;
+  font-style: italic;
+  font-weight: 600;
+}
+
+#container {
+  height: 100vh;
+}
+.my-row {
+  margin: 0;
+  width: 100%;
+  height: 15vh;
+}
+
+#calculator {
+  margin: 2em auto 2em auto;
+  padding: 1em;
+  background-color: #e8505b;
+}
+
+#display {
+  border: 1vh grey solid;
+  border-style: inset;
+}
+#keypad {
+  margin-top: 15vh;
+  border: 1px slategray solid;
+  border-radius: 4%;
+  padding: 1em;
+}
+
+.key {
+  background-color: #f9d56e;
 }
