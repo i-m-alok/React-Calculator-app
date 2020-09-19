@@ -12,9 +12,18 @@ class Button extends Component {
     console.log("Number clicked " + this.state.currentValue);
   };
 
+  addToDisplay = (event) => {
+    console.log(event.target, this.props);
+  };
+
   render() {
     return (
-      <button className="row btn m-2 key">{this.state.butttonText}</button>
+      <button
+        className="row btn m-2 key"
+        onClick={(event) => this.props.onAppend(event)}
+      >
+        {this.state.butttonText}
+      </button>
     );
   }
 }

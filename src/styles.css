@@ -28,6 +28,10 @@
   border: 1vh grey solid;
   border-style: inset;
 }
+
+#displayText {
+  color: white;
+}
 #keypad {
   margin-top: 15vh;
   border: 1px slategray solid;

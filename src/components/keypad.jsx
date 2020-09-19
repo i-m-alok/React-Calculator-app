@@ -16,7 +16,11 @@ class Keypad extends Component {
     return (
       <div className="btn-group">
         {numberSet.map((number) => (
-          <Button key={"key" + number.toString()} buttonText={number} />
+          <Button
+            key={"key" + number.toString()}
+            onAppend={(event) => this.props.onAppend(event)}
+            buttonText={number}
+          />
         ))}
       </div>
     );
