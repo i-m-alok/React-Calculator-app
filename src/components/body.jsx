@@ -8,12 +8,20 @@ class Body extends Component {
   };
 
   handleOnAppend = (event) => {
-    let currentText = this.state.displayText + event.target.innerHTML;
-    currentText.length < 13
-      ? this.setState({
-          displayText: this.state.displayText + event.target.innerHTML
-        })
-      : alert("Exceeding limit");
+    let currentElement = event.target.innerHTML;
+    let numberKeys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+    if (numberKeys.includes(currentElement)) {
+      let currentText = this.state.displayText + currentElement;
+      currentText.length < 13
+        ? this.setState({
+            displayText: currentText
+          })
+        : alert("Exceeding limit");
+    } else if (currentElement === "&lt;=") {
+      this.setState({
+        displayText: this.state.displayText.slice(0, -1)
+      });
+    }
   };
 
   render() {
