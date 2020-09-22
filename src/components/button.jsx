@@ -5,17 +5,6 @@ class Button extends Component {
     butttonText: this.props.buttonText
   };
 
-  printNum = (event) => {
-    this.setState({
-      currentValue: event.target.innerHTML
-    });
-    console.log("Number clicked " + this.state.currentValue);
-  };
-
-  addToDisplay = (event) => {
-    console.log(event.target, this.props);
-  };
-
   render() {
     return (
       <button
