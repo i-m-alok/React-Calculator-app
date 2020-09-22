@@ -19,9 +19,23 @@
 }
 
 #calculator {
-  margin: 2em auto 2em auto;
+  margin: 2em 5vw 2em 5vw;
   padding: 1em;
-  background-color: #e8505b;
+  background-image: linear-gradient(
+    to right top,
+    #ed552b,
+    #ec6927,
+    #ea7b26,
+    #e88c29,
+    #e59b30,
+    #ed9938,
+    #f49741,
+    #fa9549,
+    #ff825c,
+    #ff7075,
+    #ff6392,
+    #fb5fb0
+  );
 }
 
 #display {
@@ -34,12 +48,22 @@
   font-size: 1rem;
 }
 #keypad {
-  margin-top: 15vh;
-  border: 1px slategray solid;
+  margin-top: 10vh;
+  border: 1px solid cyan;
   border-radius: 4%;
-  padding: 1em;
+  padding: 0.5rem;
 }
 
 .key {
-  background-color: #f9d56e;
+  background-image: radial-gradient(circle, #a8eb12, #00bf72, #051937);
+  font-size: 1rem;
+  border: 1px solid cyan;
+  border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  #calculator {
+    margin: 2em 30vw 2em 30vw;
+    padding: 1em;
+  }
 }
